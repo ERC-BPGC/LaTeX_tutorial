@@ -1,0 +1,129 @@
+\documentclass[a4paper, 12pt]{article}
+\usepackage{color}
+\usepackage{graphicx}
+
+\begin{document}
+
+\title{My First Document}
+\author{Rishikesh Vanarse}
+\date{\today}
+\maketitle
+
+\pagenumbering{roman}
+\tableofcontents
+\newpage
+\pagenumbering{arabic}
+
+
+
+\section{Introduction}
+This is the introduction. The contents of the pdf do not make any sense. This is just a trial for different typesets, images, tables, equations, etc.
+
+
+
+
+\section{Methods}
+The method is described as follows:
+
+
+\subsection{Stage1}
+\label{sec1}
+The first part of the methods. Some parts of this section are written in \textit{italics} and some parts are in \textbf{bold.}
+%Line Comment
+Sentence on the same line.
+\\Sentence on a new line.
+Trial sentence with special characters: Item \#1A\textbackslash642 costs \$8 at a \~{}10\% profit. Citation trial \cite{Birdetal2001}.
+
+
+
+\subsection{Stage 2}
+The second part of methods.
+The package \texttt{color} is used to write things in {\color{red}color}.
+Here is a numbered list: 
+
+\begin{enumerate}
+\item{Item 1}
+\item{Item2}
+This item consists of a bulleted list.
+\begin{itemize}
+\item{Sub-item 1}
+\item{Sub-item 2}
+\end{itemize}
+\item{Item 3}
+\end{enumerate}
+
+This section also contains a figure, that may be automatically placed somewhere else. See figure \ref{bdome}. 
+%[h] indicates that the figure is approximately here
+%[t]=top, [b]=bottom (of page) and [p]=on separate page for all figures
+\begin{figure}[h]
+\centering
+\includegraphics[width=0.3\textwidth]{bdome.png}
+\caption{Image of the B-dome}
+\label{bdome}
+\end{figure}
+
+
+
+\subsection{Equations}
+This is an equation within the line: $1 + 2 = 3$ and this is an equation that is displayed on its own line: $$1 + 2 = 3$$
+A numbered equation can be written as:
+\begin{equation}1 + 2 = 3 \end{equation}
+Derivation:
+\begin{eqnarray*}
+something & = & a + a + a + x + x +y +y\\
+& = &3a + x + x + y + y\\
+& = &3a + 2x + y + y\\
+& = &3a + 2x + 2y
+\end{eqnarray*}
+Using mathematical symbols:
+$$x_1 = \frac{-b + \sqrt[2]{b^2 - 4ac}}{2a}$$
+$$\sum_{i=1}^n (y_i - y_{i-1})^2$$
+$$\Delta = \alpha\int_a^b f(x)dx$$
+
+
+
+
+\subsection{Tables}
+\label{tables}
+%First define the columns
+%Then write each row one by one
+\textbf{Without lines}\\
+\\
+\begin{tabular}{|l|l|l|}
+\textbf{Column1} & \textbf{Column2} & \textbf{Column3} \\
+Apple & Red & Fruit \\
+Banana & Yellow & Fruit\\
+Whale & Blue & Fish\\
+\end{tabular}
+\\
+\\
+
+
+\textbf{With lines}\\
+\\
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Column1} & \textbf{Column2} & \textbf{Column3} \\
+\hline
+Apple & Red & Fruit \\
+\hline
+Banana & Yellow & Fruit\\
+\hline
+Whale & Blue & Fish\\
+\hline \hline
+Last row &last row & last row\\
+\hline
+\end{tabular}
+
+
+
+
+
+\section{Results}
+Here are the results! Refer section \ref{sec1} on page \pageref{sec1}.
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}
+
